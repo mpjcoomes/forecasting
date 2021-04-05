@@ -9,7 +9,7 @@ Autoregressive Integrated Moving-Averages (ARIMA) models were popularised by Box
 
 where *phi<sub>p</sub>* are autoregressive terms, *theta<sub>q</sub>* are moving average forecast terms for past forecast errors, and *alpha<sub>t</sub>* is a white noise sequence. An alternative notation uses the Backshift operator:
 
-![](figures/AutoReg34.png)
+![](figures/SAS0.png)
 
 Components of the above formulas (e.g. AR, I, MA) are used selectively to create the leanest forecast model.
 
