@@ -1,7 +1,19 @@
 Basic SAS Forecasting Examples
 =
 
-Code and analysis for regression, SARIMA, and autoregressive forecasts.
+Autoregressive Integrated Moving-Averages (ARIMA) models were popularised by Box and Jenkins. They forecast a time series variable using a linear combination of past time series values (i.e. 'auto' or 'self' regression). They combine an autoregressive model, first order differencing and a moving average model. The model order 'p, d, q', meaning 'AR Order, 1st Differencing Degree, MA Order', is denoted ARIMA(*p,d,q*) and combined as follows:
+
+*X<sub>t</sub> = c + phi<sub>1</sub>X<sub>t-1</sub> + phi<sub>2</sub>X<sub>t-2</sub> +...+ phi<sub>p</sub>X<sub>t-p</sub> + e<sub>t</sub>*
+
+*e<sub>t</sub> = theta<sub>1</sub>e<sub>t-1</sub> + theta<sub>2</sub>e<sub>t-2</sub> +...+ theta<sub>q</sub>e<sub>t-q</sub> + alpha<sub>t</sub>*
+
+where *phi<sub>p</sub>* are autoregressive terms, *theta<sub>q</sub>* are moving average forecast terms for past forecast errors, and *alpha<sub>t</sub>* is a white noise sequence. An alternative notation uses the Backshift operator:
+
+![](figures/AutoReg34.png)
+
+Components of the above formulas (e.g. AR, I, MA) are used selectively to create the leanest forecast model.
+
+This page shows code and analysis for regression, Seasonal ARIMA, and autoregressive forecasts.
 
 # Short-Term Departures
 
